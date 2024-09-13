@@ -95,8 +95,12 @@ const deletarMetas = async () => {
     }
 
     metasDeletar.forEach((item) => {
-        
+        metas = metas.filter((meta) => {
+            return meta.value != item
+        })
     })
+
+    console.log("Meta(s) deletadas com sucesso!")
 }
 
 const iniciar = async () => {
