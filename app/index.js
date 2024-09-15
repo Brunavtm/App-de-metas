@@ -13,7 +13,7 @@ const cadastrarMeta = async () => {
     const meta = await input({message: "Informe a sua meta:"})
 
     if(meta.length == 0){
-        console.log("A meta não foi digitada.")
+        mensagem = "A meta não foi digitada."
         return
     }
 
@@ -57,7 +57,7 @@ const metasRealizadas = async () => {
     })
 
     if(realizadas.length == 0){
-        console.log('Não existem metas realizadas :(')
+        mensagem = 'Não existem metas realizadas :('
         return
     }
 
@@ -73,7 +73,7 @@ const metasAbertas = async () => {
     })
 
     if (abertas.length == 0){
-        console.log('Não existem metas abertas! :)')
+        mensagem = 'Não existem metas abertas! :)'
         return
     }
 
@@ -94,7 +94,7 @@ const deletarMetas = async () => {
     })
 
     if(metasDeletar == 0){
-        console.log("Nenhum item para deletar.")
+        mensagem = "Nenhum item para deletar."
         return
     }
 
@@ -104,7 +104,7 @@ const deletarMetas = async () => {
         })
     })
 
-    console.log("Meta(s) deletadas com sucesso!")
+    mensagem = "Meta(s) deletada(s) com sucesso!"
 }
 
 const mostrarMensagem = () => {
